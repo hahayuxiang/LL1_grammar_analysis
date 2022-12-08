@@ -1,4 +1,24 @@
-/*输入是可以含有直接左递归的文法*/
+/*输入是可以含有直接左递归的文法，以!代替ε*/
+/*
+输入样例:
+	3
+	E->E+T|T
+	T->T*F|F
+	F->(E)|i
+	i+i*i
+
+或
+	7
+	E->TA
+	A->+E|!
+	T->FB
+	B->T|!
+	F->PC
+	C->*C|!
+	P->(E)|a|b|^
+	a*b+b
+
+*/
 #include <iostream>
 #include <algorithm>
 #include <cstring>
